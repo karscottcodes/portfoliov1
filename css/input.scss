@@ -1,0 +1,72 @@
+/* custom.scss */
+@import '_variables';
+
+@import './scss/bootstrap.scss';
+
+// Mixins
+@mixin center-absolute($width: auto, $height: auto) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: $width;
+  height: $height;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+// Global Styles
+body {
+  font-family: $font-secondary;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-primary;
+}
+
+// Hero Section
+#hero {
+  position: relative;
+  background-color: #000;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
+
+  video {
+    @include center-absolute;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.25;
+    z-index: 1;
+  }
+}
+
+// Rounded Row
+.rounded-row {
+  border-radius: 10px; /* Adjust the value to your desired corner radius */
+}
+
+// Media Queries
+@media (pointer: coarse) and (hover: none) {
+  #hero {
+    background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') #000 no-repeat center center scroll;
+
+    video {
+      display: none;
+    }
+  }
+}

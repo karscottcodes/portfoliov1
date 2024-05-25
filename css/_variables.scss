@@ -1,0 +1,13 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+// Variables
+$font-primary: "Comfortaa", sans-serif;
+$font-secondary: "Figtree", sans-serif;
+$color-overlay: rgba(0, 0, 0, 0.25);
+
+$custom-color: #778DA9; //CUSTOM PRIMARY
+$second-color: #415a77;
+
+$primary: $custom-color; //override primary
+$secondary: $second-color;
